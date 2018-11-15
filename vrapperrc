@@ -1,0 +1,31 @@
+set number
+set expandtab           " enter spaces when tab is pressed
+set textwidth=120       " break lines when line length increases
+set tabstop=4           " use 4 spaces to represent tab
+set softtabstop=4
+set shiftwidth=4        " number of spaces to use for auto indent
+set autoindent          " copy indent from current line when starting a new
+set ruler               " syntax highlighting
+syntax on               " show partial command in status line
+
+let mapleader = ","
+let maplocalleader = "\\"
+" edit vimrc
+nnoremap <leader>ev $MYVIMRC<cr>
+" reload vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" faster way to switch back to normal mode from insert mode
+:inoremap jk <Esc>
+
+
+" more natural windows mappings
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-=> <C-W><C-=>
+
+nnoremap <S-j> :bprevious<CR>
+nnoremap <S-k> :bnext<CR>
+

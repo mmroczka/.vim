@@ -132,7 +132,6 @@ nnoremap gh :MundoToggle<CR>
 nnoremap <leader>it :TsuImport<CR>
 nnoremap <leader>af :ALEFix<CR>
 
-
 if exists(':tnoremap')
     if has('win32')
         nnoremap <leader>T :tab terminal<CR>Set-Theme tehrob<CR>clear<CR>
@@ -156,8 +155,8 @@ nnoremap Y y$
 
 " mappings for vebugger
 " ':help vebugger-keymaps' for more
-nnoremap ,k :VBGkill<CR>
-nnoremap ,s :VBGstartPDB %<CR>
+"nnoremap ,k :VBGkill<CR>
+"nnoremap ,s :VBGstartPDB %<CR>
 
 " more natural windows mappings
 nnoremap <C-J> <C-W><C-J>
