@@ -106,7 +106,7 @@ let g:gutentags_file_list_command = 'rg --files'
 let g:tsuquyomi_single_quote_import=1
 let g:VM_no_meta_mappings=1
 let g:vebugger_leader=','
-let mapleader = "\<space>"
+let mapleader = ","
 let g:rainbow_active = 1
 
 "-----mappings-----"
@@ -114,6 +114,7 @@ nnoremap <leader>bg :ToggleBG<CR>
 nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> \- :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <leader>ev :silent e $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>rt :%retab<CR>
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>rp :w<CR>:!python3 %<CR>
