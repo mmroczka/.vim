@@ -1,7 +1,10 @@
 "-----Newly Learned Vim Features-----"
 " <visual> o: alternates cursor position of highlighed text
 "
+" CTRLr + ] goes to the definition of whatever the cursor is on top of -> to
+" get back to where you were before hit CTRL + T
 "
+" To RE-select something that was previously selected in Visual mode, press gv
 "-----Test the speed of vim on startup on unix and windows, respectively-----"
 " rm -f vim.log && vim --startuptime vim.log +q && tail -n 1 vim.log | cut -f1 -d' '
 " rm -force -ErrorAction Ignore vim.log; vim --startuptime vim.log +q; tail -n 1 vim.log | cut -f1 -d' '
