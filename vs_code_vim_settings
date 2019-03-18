@@ -1,0 +1,43 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "500",
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": true,
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "prettier.requireConfig": true,
+    "vim.leader": ",",
+    "vim.autoindent": true,
+    "vim.hlsearch": true,
+    "vim.ignorecase": true,
+    "vim.incsearch": true,
+    "vim.smartcase": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "Z",
+                "Z"
+            ],
+            "commands": [
+                ":wq"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "n"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.changeAll"
+                }
+            ]
+        }
+    ],
+    "emmet.triggerExpansionOnTab": true,
+    "files.autoSave": "afterDelay"
+}
