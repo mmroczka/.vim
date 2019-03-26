@@ -8,7 +8,6 @@
     "emmet.syntaxProfiles": {
         "javascript": "jsx"
     },
-    "prettier.requireConfig": true,
     "vim.leader": ",",
     "vim.autoindent": true,
     "vim.hlsearch": true,
@@ -39,5 +38,6 @@
         }
     ],
     "emmet.triggerExpansionOnTab": true,
-    "files.autoSave": "afterDelay"
+    "prettier.tslintIntegration": true,
+    "prettier.eslintIntegration": true
 }
