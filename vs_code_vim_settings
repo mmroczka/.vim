@@ -39,5 +39,7 @@
     ],
     "emmet.triggerExpansionOnTab": true,
     "prettier.tslintIntegration": true,
-    "prettier.eslintIntegration": true
+    "prettier.eslintIntegration": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
