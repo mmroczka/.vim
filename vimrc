@@ -97,8 +97,7 @@ filetype plugin indent on
 set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab
+" On pressing tab, insert 4 spaces set expandtab
 set background=dark
 set number relativenumber
 set infercase
@@ -114,11 +113,9 @@ let g:rainbow_active = 1
 
 "-----mappings-----"
 nnoremap <leader>bg :ToggleBG<CR>
-nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> \- :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <leader>ev :silent e $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>rt :%retab<CR>
+nnoremap <leader>r\t :%retab<CR>
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>rp :w<CR>:!python3 %<CR>
 nnoremap <leader>pt :!python3 test_%<CR>
@@ -134,14 +131,22 @@ nnoremap <leader>s :%s/\v
 nnoremap gh :MundoToggle<CR>
 nnoremap <leader>it :TsuImport<CR>
 nnoremap <leader>af :ALEFix<CR>
+nnoremap <silent> <C-W>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <C-W>- :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent> <C-W>l :exe "vertical resize -5"<CR>
+nnoremap <silent> <C-W>h :exe "vertical resize +5"<CR>
+cnoreabbrev <expr> x getcmdtype() == ":" && getcmdline() == 'x' ? 'bd' : 'x'
+nnoremap QQ :exe "q!"<CR>
+
+" Makes it so splits are never smaller than one line
+set winheight=30
+set winminheight=5
 
 if exists(':tnoremap')
     if has('win32')
         nnoremap <leader>T :tab terminal<CR>Set-Theme tehrob<CR>clear<CR>
-        nnoremap <leader>t :terminal<cr><C-w>:exe "resize " . (winheight(0) * 2/3)<CR>Set-Theme tehrob<CR>clear<CR>
     else
         nnoremap <leader>T :tab terminal<CR>set -o vi<CR>
-        nnoremap <leader>t :terminal<cr><C-w>:exe "resize " . (winheight(0) * 2/3)<CR>set -o vi<CR>
     endif
 endif
 
@@ -166,10 +171,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <C-=> <C-W><C-=>
 
 if exists(':tnoremap')
-    tnoremap <C-n> <C-\><C-n>
+    tnoremap <esc><esc> <c-\><c-n>
     tnoremap <C-J> <C-W><C-J>
     tnoremap <C-K> <C-W><C-K>
     tnoremap <C-L> <C-W><C-L>
