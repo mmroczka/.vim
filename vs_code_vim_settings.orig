@@ -1,0 +1,48 @@
+{
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "500",
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": true,
+  "editor.lineNumbers": "relative",
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "vim.leader": ",",
+  "vim.autoindent": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.incsearch": true,
+  "vim.smartcase": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["Z", "Z"],
+      "commands": [":wq"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": [
+        {
+          "command": "editor.action.changeAll"
+        }
+<<<<<<< HEAD
+    ],
+    "emmet.triggerExpansionOnTab": true,
+    "prettier.tslintIntegration": true,
+    "prettier.eslintIntegration": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+=======
+      ]
+    }
+  ],
+  "emmet.triggerExpansionOnTab": true,
+  "prettier.tslintIntegration": true,
+  "prettier.eslintIntegration": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 1,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+>>>>>>> cf9e58cfb2ee5543f12eda4c4732ac11a151b192
+}
