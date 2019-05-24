@@ -25,6 +25,14 @@
         {
           "command": "editor.action.changeAll"
         }
+<<<<<<< HEAD
+    ],
+    "emmet.triggerExpansionOnTab": true,
+    "prettier.tslintIntegration": true,
+    "prettier.eslintIntegration": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+=======
       ]
     }
   ],
@@ -36,4 +44,5 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
+>>>>>>> cf9e58cfb2ee5543f12eda4c4732ac11a151b192
 }
