@@ -135,11 +135,11 @@ nnoremap <silent> <C-W>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <C-W>- :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <silent> <C-W>l :exe "vertical resize -5"<CR>
 nnoremap <silent> <C-W>h :exe "vertical resize +5"<CR>
-cnoreabbrev <expr> x getcmdtype() == ":" && getcmdline() == 'x' ? 'bd' : 'x'
+cnoreabbrev <expr> x getcmdtype() == ":" && getcmdlinj() == 'x' ? 'bd' : 'x'
 nnoremap QQ :exe "q!"<CR>
 
 " Makes it so splits are never smaller than one line
-set winheight=30
+set winheight=5
 set winminheight=5
 
 if exists(':tnoremap')
