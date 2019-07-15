@@ -137,6 +137,7 @@ nnoremap <silent> <C-W>l :exe "vertical resize -5"<CR>
 nnoremap <silent> <C-W>h :exe "vertical resize +5"<CR>
 cnoreabbrev <expr> x getcmdtype() == ":" && getcmdlinj() == 'x' ? 'bd' : 'x'
 nnoremap QQ :exe "q!"<CR>
+nnoremap <leader>c :exe ':silent !open -a /Applications/Google\ Chrome.app %'<CR>
 
 " Makes it so splits are never smaller than one line
 set winheight=5
