@@ -37,5 +37,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vsicons.dontShowNewVersionMessage": true
 }
