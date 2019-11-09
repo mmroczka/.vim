@@ -110,6 +110,9 @@ let g:VM_no_meta_mappings=1
 let g:vebugger_leader=','
 let mapleader = ","
 let g:rainbow_active = 1
+" below commands save and restore your vim folds automatically for you
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
 
 "-----mappings-----"
 nnoremap <leader>bg :ToggleBG<CR>
