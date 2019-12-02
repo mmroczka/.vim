@@ -9,13 +9,14 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 451 - ((24 * winheight(0) + 19) / 38)
+let s:l = 8 - ((7 * winheight(0) + 19) / 39)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-451
-normal! 061|
-lcd ~/.dotfiles/hammerspoon
+8
+normal! 0
+lcd ~/.dotfiles
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 " vim: set ft=vim :
