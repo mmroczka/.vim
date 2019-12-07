@@ -107,7 +107,6 @@ set noerrorbells
 let g:gutentags_file_list_command = 'rg --files'
 let g:tsuquyomi_single_quote_import=1
 let g:VM_no_meta_mappings=1
-let g:vebugger_leader=' '
 let mapleader = " "
 let g:rainbow_active = 1
 " below commands save and restore your vim folds automatically for you
