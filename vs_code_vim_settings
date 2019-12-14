@@ -1,26 +1,70 @@
 {
   "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 12,
   "editor.fontLigatures": true,
   "editor.fontWeight": "500",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false, // we enable this on a per language basis
   "editor.quickSuggestions": true,
   "editor.lineNumbers": "relative",
+  // "workbench.editor.showTabs": false,
+  "terminal.external.osxExec": "iTerm.App",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  // For ESLint
+  "eslint.autoFixOnSave": true,
+  // For TSLint
+  "editor.codeActionsOnSave": {
+      "source.fixAll.tslint": true
+  },
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
-  "vim.leader": ",",
+  "vim.leader": " ",
   "vim.autoindent": true,
   "vim.hlsearch": true,
   "vim.ignorecase": true,
+  "vim.visualstar": true,
   "vim.incsearch": true,
   "vim.smartcase": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
+  "vim.foldfix": true,
+  "editor.rulers": [120],
+  "editor.minimap.enabled": false,
+  "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["Z", "Z"],
-      "commands": [":wq"]
+      "before": ["g", "h"],
+      "commands": [
+          "cursorHomeSelect",
+      ]
     },
     {
-      "before": ["<leader>", "r", "n"],
+      "before": ["g", "j"],
+      "commands": [
+          "cursorBottomSelect",
+      ]
+    },
+    {
+      "before": ["g", "k"],
+      "commands": [
+          "cursorTopSelect",
+      ]
+    },
+    {
+      "before": ["g", "l"],
+      "commands": [
+          "cursorEndSelect",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
       "commands": [
         {
           "command": "editor.action.changeAll"
@@ -28,15 +72,85 @@
       ]
     }
   ],
-  "emmet.triggerExpansionOnTab": true,
-  "prettier.tslintIntegration": true,
-  "prettier.eslintIntegration": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "s"],
+      "after": ["#"],
+    },
+    {
+      "before": ["g", "n"],
+      "commands": [
+        { 
+          "command": "editor.action.showHover", 
+        }
+      ]
+    },
+    {
+      "before":["<C-n>"],
+      "commands": [
+          ":nohl",
+      ]
+    },
+    {
+        "before": ["z", "a"],
+        "commands": ["editor.toggleFold"],
+    },
+    {
+      "before": ["g", "h"],
+      "commands": [
+          "cursorHome",
+      ]
+    },
+    {
+      "before": ["g", "j"],
+      "commands": [
+          "cursorBottom",
+      ]
+    },
+    {
+      "before": ["g", "k"],
+      "commands": [
+          "cursorTop",
+      ]
+    },
+    {
+      "before": ["g", "l"],
+      "commands": [
+          "cursorEnd",
+      ]
+    },
+    {
+      "before": [
+        "Z",
+        "Z"
+      ],
+      "commands": [
+        ":wq"
+      ]
+    },
+    {
+      "before": [
+        "Q",
+        "Q"
+      ],
+      "commands": [
+        ":q!"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.changeAll"
+        }
+      ]
+    }
+  ],
   "window.zoomLevel": 1,
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "vsicons.dontShowNewVersionMessage": true
 }
