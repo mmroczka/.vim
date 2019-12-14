@@ -1,0 +1,95 @@
+// Place your key bindings in this file to override the defaults
+[
+    //  alt (option on macs) + h,l moves indents (h) and outdents (l) current line
+    {
+        "key": "alt+h",
+        "command": "editor.action.outdentLines",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    {
+        "key": "alt+l",
+        "command": "editor.action.indentLines",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    //  alt (option on macs) + j,k moves current line down one line (j) and up one line (k)
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    //  control + h,j,k,l moves to split on left, down, up, right
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroup"
+    },
+    //  control+shift + h,j,k,l moves entire editor group left, down, up, right
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.moveActiveEditorGroupLeft",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.moveActiveEditorGroupDown",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.moveActiveEditorGroupUp",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.moveActiveEditorGroupRight",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    // merge editor group with next one
+    {
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.joinTwoGroups",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    // merge all editor groups
+    {
+        "key": "ctrl+shift+a",
+        "command": "workbench.action.joinAllGroups",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    // splits file horizontally
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.splitEditorDown",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    // splits file horizontally
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.splitEditorRight",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+    {
+        "key": "cmd+m",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Insert"
+    },
+]
