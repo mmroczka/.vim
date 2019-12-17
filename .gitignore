@@ -6,4 +6,4 @@ bundle/**
 vim.log
 tags*
 *.swp
-view/
+view/*
