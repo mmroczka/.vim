@@ -19,7 +19,8 @@
   "eslint.autoFixOnSave": true,
   // For TSLint
   "editor.codeActionsOnSave": {
-      "source.fixAll.tslint": true
+    "source.fixAll.tslint": true,
+    "source.fixAll.eslint": true
   },
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
@@ -33,7 +34,7 @@
   "vim.smartcase": true,
   "vim.foldfix": true,
   "editor.rulers": [120],
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["g", "h"],
@@ -150,7 +151,27 @@
       ]
     }
   ],
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.down3Lines",
+      "sequence": [
+        "cursorDown",
+        "cursorDown",
+        "cursorDown"
+      ]
+    },
+    {
+      "command": "multiCommand.toggleActivityAndSidebar",
+      "sequence": [
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    }
+  ],
   "window.zoomLevel": 1,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "workbench.activityBar.visible": true,
+  "diffEditor.renderSideBySide": false,
 }
