@@ -251,10 +251,7 @@ nnoremap <leader>s :Startify<CR>
 vnoremap <leader>q :norm @q<CR>
 nnoremap gb :ls<CR>:b<Space>
 nnoremap <leader>s :%s/\v
-<<<<<<< HEAD
-=======
 " nnoremap gh :MundoToggle<CR>
->>>>>>> f707b89ad59e339b8baba32784979a7235b831a4
 nnoremap <leader>it :TsuImport<CR>
 nnoremap <leader>af :ALEFix<CR>
 nnoremap <silent> <C-W>+ :exe "resize " . (winheight(0) * 3/2)<CR>
