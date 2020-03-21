@@ -6,4 +6,8 @@ bundle/**
 vim.log
 tags*
 *.swp
+<<<<<<< HEAD
 view/
+=======
+view/*
+>>>>>>> f707b89ad59e339b8baba32784979a7235b831a4

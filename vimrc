@@ -226,9 +226,14 @@ let g:tsuquyomi_single_quote_import=1
 let g:VM_no_meta_mappings=1
 let mapleader = " "
 let g:rainbow_active = 1
-" below commands save and restore your vim folds automatically for you
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+augroup AutoSaveFolds
+  autocmd!
+  " view files are about 500 bytes
+  " bufleave but not bufwinleave captures closing 2nd tab
+  " nested is needed by bufwrite* (if triggered via other autocmd)
+  autocmd BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
+  autocmd BufWinEnter ?* silent! loadview
+augroup end
 
 "-----mappings-----"
 nnoremap <leader>ev :silent e $MYVIMRC<CR>
@@ -246,6 +251,10 @@ nnoremap <leader>s :Startify<CR>
 vnoremap <leader>q :norm @q<CR>
 nnoremap gb :ls<CR>:b<Space>
 nnoremap <leader>s :%s/\v
+<<<<<<< HEAD
+=======
+" nnoremap gh :MundoToggle<CR>
+>>>>>>> f707b89ad59e339b8baba32784979a7235b831a4
 nnoremap <leader>it :TsuImport<CR>
 nnoremap <leader>af :ALEFix<CR>
 nnoremap <silent> <C-W>+ :exe "resize " . (winheight(0) * 3/2)<CR>

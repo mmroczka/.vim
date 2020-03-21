@@ -1,0 +1,172 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "shift+cmd+b",
+        "command": "multiCommand.toggleActivityAndSidebar",
+    },
+    {
+        "key": "cmd+n",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult"
+    },
+    //  alt (option on macs) + h,l moves indents (h) and outdents (l) current line
+    {
+        "key": "alt+h",
+        "command": "editor.action.outdentLines",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "alt+l",
+        "command": "editor.action.indentLines",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    //  alt (option on macs) + j,k moves current line down one line (j) and up one line (k)
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    //  control+alt + h,j,k,l moves tab window to the left, down, up, right
+    {
+        "key": "ctrl+alt+h",
+        "command": "workbench.action.moveEditorToLeftGroup",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "workbench.action.moveEditorToBelowGroup",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "workbench.action.moveEditorToRightGroup",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "workbench.action.moveEditorToNextGroup",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    //  control + h,j,k,l moves to split on left, down, up, right
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    //  control+shift + h,j,k,l moves entire editor group left, down, up, right
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.moveActiveEditorGroupLeft",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.moveActiveEditorGroupDown",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.moveActiveEditorGroupUp",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.moveActiveEditorGroupRight",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    // merge editor group with next one
+    {
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.joinTwoGroups",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    // merge all editor groups
+    {
+        "key": "ctrl+shift+a",
+        "command": "workbench.action.joinAllGroups",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    // splits file horizontally
+    {
+        "key": "ctrl+w s",
+        "command": "workbench.action.splitEditorDown",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    // splits file horizontally
+    {
+        "key": "ctrl+w v",
+        "command": "workbench.action.splitEditorRight",
+        "when": "editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    // ========= TERMINAL COMMANDS =============
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus || editorTextFocus && !inDebugRepl && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.terminal.splitInActiveWorkspace",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "workbench.action.terminal.newInActiveWorkspace",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+ctrl+h",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+ctrl+l",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+]
