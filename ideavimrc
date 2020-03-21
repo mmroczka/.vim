@@ -1,2 +1,49 @@
 set surround
+set commentary
 set multiple-cursors
+
+let mapleader = " "
+
+nnoremap <leader>rp :action Run<cr>
+nnoremap <leader>rd :action Debug<cr>
+nnoremap <leader>rs :action Stop<cr>
+nnoremap <leader>b :action ToggleLineBreakpoint<cr>
+nnoremap <leader>/ :action SearchEverywhere<cr>
+nnoremap <leader>ev :edit ~/.ideavimrc<CR>
+nnoremap <leader>= :action ReformatCode<CR>
+
+nnoremap [<leader> O<esc>j
+nnoremap ]<leader> o<esc>k
+nnoremap [q :action PreviousOccurence<cr>
+nnoremap ]q :action NextOccurence<cr>
+nnoremap [m :action MethodUp<cr>
+nnoremap ]m :action MethodDown<cr>
+nnoremap [c :action VcsShowPrevChangeMarker<cr>
+nnoremap ]c :action VcsShowNextChangeMarker<cr>
+
+nnoremap gcc :action CommentByLineComment<cr>
+nnoremap <leader>sv :source ~/.ideavimrc<cr>
+
+nnoremap gi :action GotoImplementation<cr>
+nnoremap gd :action GotoDeclaration<cr>
+
+" built-in navigation to navigated items works better
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+" but preserve ideavim defaults
+nnoremap g<c-o> <c-o>
+nnoremap g<c-i> <c-i>
+
+" easy system clipboard copy/paste
+noremap <space>y "*y
+noremap <space>Y "*Y
+noremap <space>p "*p
+noremap <space>P "*P
+
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+
+" code refactoring
+nnoremap <space>rn :action RenameElement<cr>
