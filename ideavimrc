@@ -1,6 +1,13 @@
 set surround
 set commentary
 set multiple-cursors
+set hlsearch
+set scrolloff=3
+set ignorecase smartcase
+set showmode
+set relativenumber
+set history=100000
+
 
 let mapleader = " "
 
@@ -16,6 +23,45 @@ nnoremap [<leader> O<esc>j
 nnoremap ]<leader> o<esc>k
 nnoremap [q :action PreviousOccurence<cr>
 nnoremap ]q :action NextOccurence<cr>
+" EASY SYSTEM CLIPBOARD COPY/PASTE
+noremap <leader>y "*y
+noremap <leader>Y "*Y
+noremap <leader>p "*p
+noremap <leader>P "*P
+
+" CLEAR THE SEARCH BUFFER WHEN HITTING RETURN
+nnoremap <leader><cr> :nohlsearch<cr>:c
+
+" CUSTOM
+" Exit vim without saving faster
+nnoremap QQ :action CloseEditor<cr>
+
+" MORE NATURAL WINDOWS MAPPINGS
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
+
+" SPLIT TAB VERTICALLY/HORIZONTALLY
+nnoremap <C-w>w :action SplitHorizontally<CR>
+nnoremap <C-w>v :action SplitVertically<CR>
+nnoremap <C-w>o :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <C-w>m :action Unsplit<CR>
+
+" CODE REFACTORING
+nnoremap <leader>rn :action RenameElement<cr>
+
+"DEBUGGER
+nnoremap <leader>bp :action ToggleLineBreakpoint<CR>
+
+" COMMENTS
+nnoremap gcc :action CommentByLineComment<cr>
+vnoremap gcc :action CommentByLineComment<cr>
+vnoremap gcC :action CommentByBlockComment<cr>
+
+" UNIMPAIRED MAPPINGS
+nnoremap [<space> O<esc>j
+nnoremap ]<space> o<esc>k
 nnoremap [m :action MethodUp<cr>
 nnoremap ]m :action MethodDown<cr>
 nnoremap [c :action VcsShowPrevChangeMarker<cr>
@@ -47,3 +93,18 @@ nnoremap <c-k> <c-w>k
 
 " code refactoring
 nnoremap <space>rn :action RenameElement<cr>
+" BUILT-IN NAVIGATION TO NAVIGATED ITEMS WORKS BETTER
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+" BUT PRESERVE IDEAVIM DEFAULTS
+nnoremap g<c-o> <c-o>
+nnoremap g<c-i> <c-i>
+
+" BUILT IN SEARCH LOOKS BETTER
+nnoremap / :action Find<cr>
+" BUT PRESERVE IDEAVIM SEARCH
+nnoremap g/ /
+
+" TODO -- CODE FOLDING...
+
+noremap <leader>sv :source ~/.ideavimrc<CR>

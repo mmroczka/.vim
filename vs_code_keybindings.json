@@ -14,6 +14,21 @@
         "command": "search.action.focusPreviousSearchResult",
         "when": "hasSearchResult"
     },
+    {
+        "key": "cmd+v",
+        "command": "pasteAndIndent.action",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
     //  alt (option on macs) + h,l moves indents (h) and outdents (l) current line
     {
         "key": "alt+h",
@@ -169,4 +184,36 @@
         "command": "workbench.action.terminal.focusNext",
         "when": "terminalFocus"
     },
+    {
+        "key": "shift+alt+cmd+p",
+        "command": "turboConsoleLog.displayLogMessage"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "-turboConsoleLog.displayLogMessage"
+    },
+    {
+        "key": "ctrl+shift+alt+cmd+d",
+        "command": "turboConsoleLog.deleteAllLogMessages"
+    },
+    {
+        "key": "shift+alt+d",
+        "command": "-turboConsoleLog.deleteAllLogMessages"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "-workbench.view.debug"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "-workbench.view.debug"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "-workbench.view.debug"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "-workbench.view.debug"
+    }
 ]

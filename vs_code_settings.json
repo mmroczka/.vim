@@ -1,30 +1,73 @@
 {
   "editor.fontFamily": "Fira Code",
   "editor.fontSize": 12,
+  "window.zoomLevel": 2,
+  // "window.zoomLevel": 1,
   "editor.fontLigatures": true,
   "editor.fontWeight": "500",
   "editor.formatOnSave": false, // we enable this on a per language basis
   "editor.quickSuggestions": true,
-  "editor.lineNumbers": "relative",
-  // "workbench.editor.showTabs": false,
+  "editor.lineNumbers": "on", // relative | on | off
+  "editor.rulers": [120],
+  "editor.suggestSelection": "first",
   "terminal.external.osxExec": "iTerm.App",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
-  // For ESLint
-  "eslint.autoFixOnSave": true,
-  // For TSLint
-  "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true,
-    "source.fixAll.eslint": true
-  },
+  // For ESLint/TSLint
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.tslint": true,
+  //   "source.fixAll.eslint": true,
+  // },
+  "importCost.javascriptExtensions": [
+    "\\.jsx?$",
+    "\\.jsx",
+    "jsx"
+  ],
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.snippetSuggestions": "bottom",
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  // "workbench.editor.showTabs": false,
   "vim.leader": " ",
   "vim.autoindent": true,
   "vim.hlsearch": true,
@@ -33,33 +76,20 @@
   "vim.incsearch": true,
   "vim.smartcase": true,
   "vim.foldfix": true,
-  "editor.rulers": [120],
-  "editor.minimap.enabled": true,
+  "vim.replaceWithRegister": true,
+/*   "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+  "vim.statusBarColors.insert": "#BF616A",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC", */
   "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["g", "h"],
-      "commands": [
-          "cursorHomeSelect",
-      ]
-    },
-    {
-      "before": ["g", "j"],
-      "commands": [
-          "cursorBottomSelect",
-      ]
-    },
-    {
-      "before": ["g", "k"],
-      "commands": [
-          "cursorTopSelect",
-      ]
-    },
-    {
-      "before": ["g", "l"],
-      "commands": [
-          "cursorEndSelect",
-      ]
-    },
     {
       "before": [
         "<leader>",
@@ -71,7 +101,18 @@
           "command": "editor.action.changeAll"
         }
       ]
-    }
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.quickFix"
+        }
+      ]
+    },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -87,6 +128,41 @@
       ]
     },
     {
+      "before": [
+        "<leader>",
+        "r",
+        "a"
+      ],
+      "commands": [
+        {
+          "command": "extension.arrowFunctionConverter"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.quickFix"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "p"
+      ],
+      "commands": [
+        {
+          "command": "cmstead.jsRefactor.shiftParams"
+        }
+      ]
+    },
+    {
       "before":["<C-n>"],
       "commands": [
           ":nohl",
@@ -95,30 +171,6 @@
     {
         "before": ["z", "a"],
         "commands": ["editor.toggleFold"],
-    },
-    {
-      "before": ["g", "h"],
-      "commands": [
-          "cursorHome",
-      ]
-    },
-    {
-      "before": ["g", "j"],
-      "commands": [
-          "cursorBottom",
-      ]
-    },
-    {
-      "before": ["g", "k"],
-      "commands": [
-          "cursorTop",
-      ]
-    },
-    {
-      "before": ["g", "l"],
-      "commands": [
-          "cursorEnd",
-      ]
     },
     {
       "before": [
@@ -168,10 +220,14 @@
       ]
     }
   ],
-  "window.zoomLevel": 1,
-  "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "terminal.integrated.shell.osx": "/bin/zsh",
+  "git.path": "/usr/local/bin/git",
+  "terminal.integrated.scrollback": 10000,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "gitlens.views.compare.files.layout": "list",
+  "editor.accessibilitySupport": "off",
   "workbench.activityBar.visible": true,
-  "diffEditor.renderSideBySide": false,
+  "git.enableSmartCommit": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
 }
